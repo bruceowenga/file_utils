@@ -17,6 +17,7 @@ To use the FileUtils module, you need to have Python 3.x installed on your syste
 ```shell
 pip install requests
 ```
+
 ## Usage
 
 1. Import the `FileInfo` class from the `fileUtils` module into your Python project.
@@ -32,13 +33,10 @@ from fileUtils import FileInfo
 url = 'https://example.com/file.txt'
 file_info = FileInfo(url)
 
-file_size = file_info.get_file_size()
+file_size, mime_type, status_code = file_info.get_file_info()
+
 print(f"File Size: {file_size} bytes")
-
-mime_type = file_info.get_mime_type()
 print(f"MIME Type: {mime_type}")
-
-status_code = file_info.get_status_code()
 print(f"Status Code: {status_code}")
 
 ```
